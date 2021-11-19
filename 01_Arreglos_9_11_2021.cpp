@@ -1,10 +1,12 @@
 /*
-Realice un programa que me permita buscar un elemento num�rico
-dentro de un arreglo bidimensional.  El arreglo bidimensional
-es de tama�o 7 x 5, el cual se llena de forma autom�tica
-
-- es un numero el que se busca, no la posici�n y se dede decir si esta, y cuantas veces
+Programa:
+Se realiza un programa que me permita buscar un elemento numérico dentro de un arreglo bidimensional.  
+El arreglo bidimensional es de tamaño 7 x 5, el cual se llena de forma automática.
+- es un numero el que se busca, no la posición y se debe decir si esta, y cuantas veces
 - la idea es que se llene de forma aleatoria
+
+A mejorar: 
+aprender a utilizar mejor la la función rand()
 */
 
 #include <iostream>
