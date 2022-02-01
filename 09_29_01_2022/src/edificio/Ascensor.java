@@ -4,9 +4,13 @@ public class Ascensor {
 	
 	int pisos = 10;
 	int sotanos = 3;
-	int piso;
-	int actual = sotanos;
-	String total[] = new String[pisos+sotanos];
+	
+	int piso; //Piso en el que llama la persona
+	int actual = sotanos; //Piso en el que inicia el Ascensor
+	
+	String total[] = new String[pisos+sotanos];//Arreglo que tiene los nombres de los pisos
+	
+	//Para llenar el arreglo con los nombres de los pisos
 	void Edificio() {
 		for(int s = sotanos-1; s>=0;s--) {
 			total[sotanos-s-1]="S"+(s+1);
@@ -23,20 +27,23 @@ public class Ascensor {
 	}
 	
 	
-	
+	//Simula el movimiento del Ascensor
 	void mover(String _piso) {
-		piso=-1;
+		piso=-1;//para romper el ciclo si no encuentra el piso
+		
+		//Busca el piso ingresado dentro del arreglo
 		for(int i = 0;i<total.length;i++) {
 			if(total[i].equalsIgnoreCase(_piso)) {
 				piso = i;
 			}
 		}
-		if(piso==-1) {
-			System.out.println("Fin del recorrido (Piso no valido)");
-		}else
 //		System.out.println(total[actual]);
 //		System.out.println(total[piso]);
-		if(piso==actual) {
+
+		//Si no encuentra el piso, termina el programa
+		if(piso==-1) {
+			System.out.println("Fin del recorrido (Piso no valido)");
+		}else if(piso==actual) {
 			System.out.println("Estoy en su piso");
 		}else if(actual>piso) {
 			for(int i = actual; i>=piso;i-- ) {
@@ -62,7 +69,9 @@ public class Ascensor {
 		
 	}
 	
+	
 	void activar() {
+	    //Si la persona llama en un piso valido
 		while(piso!=-1){
 			System.out.println();
 			System.out.println("-------------------ASCENSOR------------------------");
